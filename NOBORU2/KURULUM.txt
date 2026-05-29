@@ -1,4 +1,0 @@
-NOBORU2-test.vpk -> Vita (VitaShell ile yukle)
-TITLE_ID: NOBO20001
-Ayarlar -> NSFW ac
-Catalog -> nhentai
