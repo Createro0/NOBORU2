@@ -1,0 +1,43 @@
+NOBORU2 PARSER SYSTEM - REPARO CONCLUÍDO
+================================================
+
+STATUS: ✓ RESOLVIDO
+
+PROBLEMA ENCONTRADO:
+- main.lua só carregava parsers de ux0:data/noboru/parsers/
+- Parsers inclusos no VPK (app0:assets/parsers/) não eram carregados automaticamente
+- nhentai parser estava no VPK mas não era ativado
+
+SOLUÇÃO IMPLEMENTADA:
+- Modificado main.lua para carregar parsers em DUAS localizações:
+  1. app0:assets/parsers/ (PRIMEIRO - parsers do VPK)
+  2. ux0:data/noboru/parsers/ (SEGUNDO - parsers do usuario)
+
+ARQUIVOS ALTERADOS:
+✓ c:\Users\Administrator\Desktop\flamenk\NOBORU2\vpk_extract\main.lua
+✓ c:\Users\Administrator\Desktop\flamenk\NOBORU-master\source\main.lua
+✓ VPK RECONSTRUÍDO: c:\Users\Administrator\Desktop\flamenk\NOBORU2\NOBORU2-test.vpk
+
+VERIFICAÇÕES REALIZADAS:
+✓ main.lua contém fix de carregamento de parsers
+✓ Parser nhentai incluído em assets/parsers/[DF]nhentai.lua
+✓ param.sfo gerado com TITLE_ID=NOBO20001
+✓ VPK redimensionado corretamente (10.06 MB)
+✓ Estrutura de arquivos validada
+
+COMO USAR:
+1. Instalar NOBORU2-test.vpk via VitaShell
+2. Executar NOBORU 2
+3. Settings → NSFW → ON
+4. Catalog → nhentai (deve aparecer na lista)
+
+NOTAS TECNICAS:
+- Sistema agora suporta multiple parser sources
+- Parsers do usuario podem sobrescrever os do VPK
+- Erros de carregamento são logados em console
+
+PROBLEMAS CONHECIDOS:
+- nhentai usa images .webp (possível problema de renderização)
+- Remover ux0:data/noboru/cache se houver problemas
+
+DATA: 28-05-2026
